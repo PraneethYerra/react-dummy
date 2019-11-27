@@ -5,4 +5,4 @@ before_install:
   - docker build -t praneeth1997/react-dummy -f Dockerfile.dev .
 
 script:
-  - docker run praneeth1997/react-dummy npm run test -- --coverage
+  - docker run -e CI=true praneeth1997/react-dummy npm run test 
